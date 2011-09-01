@@ -51,6 +51,9 @@ To be honest, I have a terrible time remembering to return books to the library.
 
 _Library Daemon_ does not match the functionality of the full website in any way, nor does it try to. It simply provides an interface for viewing your checkouts that is both sexy and smart-phone friendly.
 
+## Help
+If you have any questions or comments please feel free to [get in touch with me](http://hami.sh/contact/). Thanks for checking out Library Daemon!
+
 ## Change Log
 9/1/2011 - v1
 - Initial release
