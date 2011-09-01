@@ -8,7 +8,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script src="jquery.tablesorter.min.js"></script>
+		<script src="js/jquery.tablesorter.min.js"></script>
 		<script>
 			$(document).ready(function() 
 			    { 
@@ -16,7 +16,7 @@
 			    } 
 			);
 		</script>
-		<link rel="stylesheet" media="all" href="library.css"/>
+		<link rel="stylesheet" media="all" href="css/library.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 	</head>
@@ -37,20 +37,20 @@
 				</thead>
 				<tbody>
 				<?php
-					include("_books.inc.php");
+					include("inc/_books.inc.php");
 				?>
 				</tbody>
 				
 			</table>
 			
 			<?php
-				include("_account.inc.php");
+				include("inc/_account.inc.php");
 			?>
 			
 		</section>
 		<footer>
 			<?
-				$last_modified = filemtime("_books.inc.php");
+				$last_modified = filemtime("inc/_books.inc.php");
 				$last_modified = date("m/j/y h:i", $last_modified);
 			?>
 			<p>&copy; <a href="http://hami.sh/">hamish</a> | last updated <?=$last_modified?></p>

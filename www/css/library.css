@@ -96,7 +96,7 @@ px      68    160    252    344    436    528    620    712    804    896    */
 body 
 {
 	padding: 42px 48px 84px;
-	background: rgb(250,250,250) url(bg.gif);
+	background: rgb(250,250,250) url(../img/bg.gif);
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
@@ -116,7 +116,7 @@ a
 	{
 		line-height: 122px;
 		text-indent: -9999px;
-		background: url(logo2.png) no-repeat left center;
+		background: url(../img/logo2.png) no-repeat left center;
 	}
 	#masthead h1 em
 	{
@@ -213,30 +213,30 @@ a
 		/* TYPE */
 		#checkouts table td span.dvd, #checkouts table td span.cd
 		{
-			background: url(type_sprites.png) 0 0 no-repeat;
+			background: url(../img/type_sprites.png) 0 0 no-repeat;
 			padding-left: 23px;
 		}
 		
 		#checkouts table td span.book
 		{
-			background: url(type_sprites.png) 0 -36px no-repeat;
+			background: url(../img/type_sprites.png) 0 -36px no-repeat;
 			padding-left: 23px;
 		}
 		
 		/* STATUS */
 		#checkouts table td span.checkedout
 		{
-			background: url(status_sprites.png) 0 1px no-repeat;
+			background: url(../img/status_sprites.png) 0 1px no-repeat;
 			padding-left: 22px;
 		}
 		#checkouts table td span.overdue
 		{
-			background: url(status_sprites.png) 0 -31px no-repeat;
+			background: url(../img/status_sprites.png) 0 -31px no-repeat;
 			padding-left: 22px;
 		}
 		#checkouts table td span.return
 		{
-			background: url(status_sprites.png) 0 -63px no-repeat;
+			background: url(../img/status_sprites.png) 0 -63px no-repeat;
 			padding-left: 22px;
 		}
 		
@@ -260,7 +260,7 @@ a
 		line-height: normal;
 		border-bottom: 1px solid #ccc;
 		border-radius: 5px 5px 0 0;
-		background: #f1f1f1 url(type_sprites.png) 8px -62px no-repeat;
+		background: #f1f1f1 url(../img/type_sprites.png) 8px -62px no-repeat;
 		padding-left: 33px;
 	}
 	#account ul
@@ -343,7 +343,7 @@ px      68    160    252    */
 	{
 		line-height: 116px;
 		text-indent: -9999px;
-		background: url(logo2_small.png) no-repeat left center;
+		background: url(../img/logo2_small.png) no-repeat left center;
 	}
 	
 	/* Force table to not be like tables anymore */
@@ -428,7 +428,7 @@ px      68    160    252    344    436    */
 	{
 		line-height: 122px;
 		text-indent: -9999px;
-		background: url(logo2.png) no-repeat left center;
+		background: url(../img/logo2.png) no-repeat left center;
 	}
 	
 }
