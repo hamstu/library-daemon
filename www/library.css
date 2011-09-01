@@ -1,0 +1,434 @@
+/*
+  ========================================
+  Library Checker CSS
+  ----------------------------------------
+  Adapted from the Less Framework, by
+  Joni Korpi (http://lessframework.com)
+  ----------------------------------------
+  @author: Hamish Macpherson
+  @url: http://hami.sh/
+  ========================================
+*/
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 25px;
+	line-height: 35px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 20px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 16px;
+
+	line-height: 30px;
+}
+
+body {
+	/*font: 16px/24px 'Helvetica Neue', Helvetica, sans-serif;*/
+	font: 16px/24px Georgia, serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body 
+{
+	padding: 42px 48px 84px;
+	background: rgb(250,250,250) url(bg.gif);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+a
+{
+	color: #888;
+}
+
+#masthead
+{
+	border-top: 5px solid #D56EC5;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+	#masthead h1
+	{
+		line-height: 122px;
+		text-indent: -9999px;
+		background: url(logo2.png) no-repeat left center;
+	}
+	#masthead h1 em
+	{
+		color: rgba(0,0,0, .4);
+		font-weight: normal;
+	}
+	#masthead h1 em:before
+	{
+		content: "– ";
+	}
+
+#checkouts table
+{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+	#checkouts table tbody
+	{
+		border: 1px solid #ccc;
+	}
+	#checkouts table th
+	{
+		background: #666;
+		color: #fff;
+		border-bottom: 2px solid #444;
+		text-align: left;
+		padding: 5px 0 5px 5px;
+		border-collapse: none;
+		text-shadow: 1px 1px 0 #444;
+		font-weight: normal;
+	}
+		#checkouts table th.due
+		{
+			width: 120px;
+		}
+		#checkouts table th.status
+		{
+			width: 180px;
+		}
+		
+	#checkouts table thead tr th:last-child
+	{
+		border-top-right-radius: 5px;
+	}
+	#checkouts table thead tr th:first-child
+	{
+		border-top-left-radius: 5px;
+		padding-left: 10px;
+	}
+	#checkouts table thead tr th:hover
+	{
+		cursor: pointer;
+	}
+	#checkouts table thead tr th.headerSortDown:after
+	{
+		content: " \02193";
+	}
+	#checkouts table thead tr th.headerSortUp:after
+	{
+		content: " \02191";
+	}
+	#checkouts table tr:nth-of-type(odd) {
+	        background: #fff;
+	}
+	#checkouts table tr:nth-of-type(even) {
+	        background: #f3f3f3;
+	}
+	#checkouts table tbody tr:last-child {
+	        border-bottom: 5px solid #D56EC5;
+	}
+	#checkouts table tr
+	{
+		-webkit-transition: all .1s ease-in-out;
+		cursor: default;
+	}
+	#checkouts table tr:hover
+	{
+		background-color: #e1e1e1;
+		color: #000;
+	}	
+	#checkouts table td
+	{
+		padding: 5px;
+		vertical-align: top;
+		border-bottom: 1px solid #ccc;
+	}
+		/* TITLE */
+		#checkouts table td span.title em
+		{
+			color: rgba(0,0,0,.4);
+		}
+		
+		/* TYPE */
+		#checkouts table td span.dvd, #checkouts table td span.cd
+		{
+			background: url(type_sprites.png) 0 0 no-repeat;
+			padding-left: 23px;
+		}
+		
+		#checkouts table td span.book
+		{
+			background: url(type_sprites.png) 0 -36px no-repeat;
+			padding-left: 23px;
+		}
+		
+		/* STATUS */
+		#checkouts table td span.checkedout
+		{
+			background: url(status_sprites.png) 0 1px no-repeat;
+			padding-left: 22px;
+		}
+		#checkouts table td span.overdue
+		{
+			background: url(status_sprites.png) 0 -31px no-repeat;
+			padding-left: 22px;
+		}
+		#checkouts table td span.return
+		{
+			background: url(status_sprites.png) 0 -63px no-repeat;
+			padding-left: 22px;
+		}
+		
+#account
+{
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #aaa; 
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background: #fff;
+	margin-top: 20px;
+	padding: 0;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+	#account h2
+	{
+		font-size: 16px;
+		font-weight: normal;
+		padding: 10px 10px;
+		margin: 0;
+		line-height: normal;
+		border-bottom: 1px solid #ccc;
+		border-radius: 5px 5px 0 0;
+		background: #f1f1f1 url(type_sprites.png) 8px -62px no-repeat;
+		padding-left: 33px;
+	}
+	#account ul
+	{
+		list-style-type: none;
+	}
+	
+	#account p
+	{
+		border-bottom: 1px solid #ccc;
+		padding: 5px 10px;
+	}
+		#account p.last-child
+		{
+			border-bottom: none;
+		}
+	
+	#account p strong
+	{
+		font-weight: normal;
+		color: #777;
+		text-transform: lowercase;
+		font-variant: small-caps;
+		font-size: 18px;
+	}
+		#account p strong:after
+		{
+			content: " – ";
+		}
+		
+footer
+{
+	margin-top: 20px;
+}
+	footer p
+	{
+		font-size: 12px;
+	}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 28px 34px 60px;
+	}
+	
+	#masthead
+	{
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	
+	#masthead h1
+	{
+		line-height: 116px;
+		text-indent: -9999px;
+		background: url(logo2_small.png) no-repeat left center;
+	}
+	
+	/* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+            display: block;
+    }
+	
+	/* remove border */
+	#checkouts table tbody {border:none;}
+	
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+    }
+
+    tr { 
+			border: 1px solid #ccc;
+			border-top: 5px solid #D56EC5; 
+			margin-bottom: 10px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		}
+
+    td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+    }
+
+    td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    td:nth-of-type(1) { background: #f1f1f1; }
+    td:nth-of-type(2) span:before { content: "Due: " }
+    td:nth-of-type(3) { } 
+	
+	#checkouts table tr:nth-of-type(odd) {
+	        background: #fff;
+	}
+	#checkouts table tr:nth-of-type(even) {
+	        background: #fff;
+	}
+	#checkouts table tbody tr:last-child {
+	        border-bottom: 1px solid #ccc; 
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+	
+	#masthead h1
+	{
+		line-height: 122px;
+		text-indent: -9999px;
+		background: url(logo2.png) no-repeat left center;
+	}
+	
+}

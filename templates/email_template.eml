@@ -1,0 +1,16 @@
+From: $from_name <$from>
+To: $to
+MIME-Version: 1.0
+Content-type: text/html
+Subject: $subject
+
+<p><b>Hey there!</b> Just wanted to let you know that the following items are due very soon.</p>
+
+<ol>
+$items_html
+</ol>
+
+<p>Thanks!</p>
+
+<p>Sincerely,<br>
+Library Daemon<p>
