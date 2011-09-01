@@ -2,3 +2,4 @@
 library.tmproj
 tests
 *.pyc
+library_log
