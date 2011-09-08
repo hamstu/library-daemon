@@ -42,8 +42,11 @@ except IOError:
 # LOGGING
 # --------------------------------------------------
 
+log_filename = c.get("settings", "LOG_FILENAME")
+log_path = os.path.join(sys.path[0], log_filename)
+
 logging.basicConfig(\
-	filename = 	c.get("settings", "LOG_FILENAME"), 
+	filename = 	log_path, 
 	level = 	logging.DEBUG, 
 	format = 	'%(asctime)s %(message)s', 
 	datefmt = 	'[%m/%d/%Y %I:%M:%S %p]')
